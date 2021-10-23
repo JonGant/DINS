@@ -15,7 +15,7 @@ pip install -r requirements.txt
 Using Python 3 run
 
 ```
-python DWIS_v9.py
+python DINS.py
 ```
 
 Code written by Jonathan Gant at the University of Florida
