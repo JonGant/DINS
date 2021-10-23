@@ -12,8 +12,8 @@ List of variables: Refer to individual subroutine documentation.
 Common Blocks: None
 
 List of subroutines (functions):
-DWIS - class defining the parents class of the GUI.
-    __init__ - constructor for the DWIS class.
+DINS - class defining the parents class of the GUI.
+    __init__ - constructor for the DINS class.
     show_frame - shows the frame requested by the controller.
     get_frame - shows specific frame with a given name.
 """
@@ -23,11 +23,11 @@ import functions.gui
 import tkinter as tk
 
 
-# DWIS class. Parent class of the program. Defines basic setup of the three frames as well as a GUI title and spatial configuration of labels and entry boxes.
-class DWIS(tk.Tk):
+# DINS class. Parent class of the program. Defines basic setup of the three frames as well as a GUI title and spatial configuration of labels and entry boxes.
+class DINS(tk.Tk):
     def __init__(self, *args, **kwargs):
         """
-        Constructor for the DWIS class.
+        Constructor for the DINS class.
         Parameters:
             self - class level instantiation necessary for accessing class variables.
             *args - command line arguments
@@ -36,9 +36,9 @@ class DWIS(tk.Tk):
             None
         """
         tk.Tk.__init__(self, *args, **kwargs)
-        tk.Tk.wm_title(self, "DWIS")
+        tk.Tk.wm_title(self, "DINS")
 
-        # tk.Tk.iconbitmap(self, default="DWIS_icon.ico")
+        # tk.Tk.iconbitmap(self, default="DINS_icon.ico")
 
         container = tk.Frame(self)
         container.pack(side="top", fill="both", expand=True)
@@ -82,5 +82,5 @@ class DWIS(tk.Tk):
 
 # if file is run as the main file then execute the following code allowing for user input in a simple GUI
 if __name__ == "__main__":
-    app = DWIS()
+    app = DINS()
     app.mainloop()
