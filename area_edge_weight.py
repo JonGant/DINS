@@ -56,4 +56,4 @@ for fname in list(glob.glob('simulation_parameters/*.txt')):
                 # edge weight calculation
                 adj_mat[node1, node2] = ((res**3)/(s**3)) * (2 / (sa[node1] + sa[node2])) * sum
                 adj_mat[node2, node1] = adj_mat[node1, node2]
-        np.savetxt(fname[22:-4] + "_cp_ew.txt", adj_mat, delimiter=" ")
+        np.savetxt(fname[22:-4] + "_cp_ew" + str(s) + ".txt", adj_mat, delimiter=" ")
