@@ -546,6 +546,11 @@ class AddROI(tk.Frame):
         button2 = tk.Button(self, text="Add Fibers", command=lambda: controller.show_frame(AddFiber))
         button2.grid(row=0, column=1)
 
+        center_lbl = ttk.Label(self, text="Center Point")
+        center_lbl.grid(row=1, column=5)
+        size_lbl = ttk.Label(self, text="ROI Size")
+        size_lbl.grid(row=1, column=6)
+
         self.orig_color = button1.cget("background")
 
         self.roi_lbls = [ttk.Label(self, text="ROI " + str(i+1) + ":", font=LARGE_FONT) for i in range(self.num_rois)]
@@ -926,6 +931,17 @@ class AddFiber(tk.Frame):
 
         button2 = tk.Button(self, text="Add ROIs", command=lambda: controller.show_frame(AddROI))
         button2.grid(row=0, column=1)
+
+        edge_lbl = ttk.Label(self, text="ROI #'s")
+        edge_lbl.grid(row=1, column=2)
+        eigen_lbl = ttk.Label(self, text="DT Eigenvalues")
+        eigen_lbl.grid(row=1, column=3)
+        radius_lbl = ttk.Label(self, text="Radius")
+        radius_lbl.grid(row=1, column=4)
+        points_lbl = ttk.Label(self, text="Start/Mid/End Points")
+        points_lbl.grid(row=1, column=5)
+        geom_lbl = ttk.Label(self, text="Geometry")
+        geom_lbl.grid(row=1, column=6)
 
         self.fiber_lbls = [ttk.Label(self, text="Fiber " + str(i + 1) + ":", font=LARGE_FONT) for i in range(self.num_fibers)]
         self.fibers = [ttk.Entry(self, width=10) for _ in range(self.num_fibers)]
