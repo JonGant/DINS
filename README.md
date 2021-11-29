@@ -3,7 +3,7 @@ Diffusion Image Network Simulator
 
 This program simulates diffusion weighted images based on user defined ROIs and fiber geometries representative of white matter fiber bundles in the brain. To run the program, simply execute the python file DINS.py. Folders containing the simulated images and simulation parameters will automatically be created once a simulation is run.
 
-Package Dependencies: scipy, nibabel, numpy, sympy
+Package Dependencies: matplotlib, nibabel, numpy, scipy, sympy
 
 Installation Instructions:
 Download package dependencies
