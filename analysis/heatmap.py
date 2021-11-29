@@ -2,20 +2,26 @@ import numpy as np
 import matplotlib.pyplot as plt
 import glob
 
-for file in list(glob.glob('nifti_images/jacks_cp_ew.txt')):
+for file in list(glob.glob('branching*_cp_e*.txt')):
+    # sn = np.genfromtxt(file, delimiter=' ', dtype='float')
+    # plt.imshow(sn, cmap='hot', interpolation='nearest')
+    # plt.colorbar()
+    # plt.suptitle(file[13:-4] + "_w1")
+    # plt.savefig(file[13:-4] + "_w1.png")
+    # plt.show()
     sn = np.genfromtxt(file, delimiter=' ', dtype='float')
     plt.imshow(sn, cmap='hot', interpolation='nearest')
     plt.colorbar()
-    plt.suptitle(file[21:-4])
-    plt.savefig(file[21:-4] + ".png")
+    plt.suptitle(file[:-4] + "_w3")
+    plt.savefig(file[:-4] + "_w3.png")
     plt.show()
-    node_strength = 0
-    for i in range(7):
-        node_strength += sn[0, i]
-    print(node_strength)
-    # new_sn = np.zeros((6, 6))
-    # for i in range(6):
-    #     for j in range(6):
+    # node_strength = 0
+    # for i in range(7):k
+    #     node_strength += sn[0, i]
+    # print(node_strength)
+    # new_sn = np.zeros(np.shape(sn))
+    # for i in range(np.shape(sn)[0]):
+    #     for j in range(np.shape(sn)[1]):
     #         row_sum = np.sum(sn[i, :])
     #         col_sum = np.sum(sn[:, j])
     #         if row_sum != 0 or col_sum != 0:
@@ -26,6 +32,6 @@ for file in list(glob.glob('nifti_images/jacks_cp_ew.txt')):
     # plt.imshow(new_sn, cmap='hot', interpolation='nearest')
     # plt.clim(0, 1)
     # plt.colorbar()
-    # plt.suptitle(file[21:-4] + "_new")
-    # plt.savefig(file[21:-4] + "_new.png")
+    # plt.suptitle(file[13:-4] + "_w2")
+    # plt.savefig(file[13:-4] + "_w2.png")
     # plt.show()

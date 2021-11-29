@@ -2,7 +2,7 @@ import numpy as np
 import nibabel as nib
 import glob
 
-for fname in list(glob.glob('simulation_parameters/*.txt')):
+for fname in list(glob.glob('simulation_parameters/3d_jacks_roi_5_rad_3_length_10.txt')):
     file = open(fname, "r")
     # clear extraneous file info
     for i in range(8):
@@ -51,9 +51,9 @@ for fname in list(glob.glob('simulation_parameters/*.txt')):
                 for streamline in gen:
                     length = 0
                     for i in range(len(streamline) - 1):
-                        length += np.linalg.norm(streamline[i + 1] - streamline[i])
+                        length += np.linalg.norm(res * streamline[i + 1] - res * streamline[i])
                     sum += (1 / length)
                 # edge weight calculation
                 adj_mat[node1, node2] = ((res**3)/(s**3)) * (2 / (sa[node1] + sa[node2])) * sum
                 adj_mat[node2, node1] = adj_mat[node1, node2]
-        np.savetxt(fname[22:-4] + "_cp_ew" + str(s) + ".txt", adj_mat, delimiter=" ")
+        np.savetxt(fname[22:-4] + "_" + str(s) + "_cubic_cp_ew_wm.txt", adj_mat, delimiter=" ")
