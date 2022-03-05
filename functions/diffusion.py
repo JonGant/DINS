@@ -1,6 +1,6 @@
 """
 Author: Jonathan Gant
-Modification Dates: August 10th 2021
+Modification Date: August 10th 2021
 General Description: This script contains the functions which calculate the bvector distribution based on the electrostatic repulsion model developed by Caruyer et al. and simulate the diffusion weighted signal.
 References:
 Caruyer, Emmanuel, Christophe Lenglet, Guillermo Sapiro, and Rachid Deriche.
