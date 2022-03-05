@@ -1,6 +1,6 @@
 """
 Author: Jonathan Gant
-Modification Dates: August 10th 2021
+Modification Date: August 10th 2021
 General Description: This script contains the classes defining the tkinter GUI for the image simulator.
 
 List of subroutines (functions):
