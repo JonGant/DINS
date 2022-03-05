@@ -1,11 +1,7 @@
 """
 Author: Jonathan Gant
-Modification Dates: August 10th 2021
+Modification Date: August 10th 2021
 General Description: This script contains helper functions which are used to calculate the diffusion tensors based on the fiber geometries.
-References:
-Caruyer, Emmanuel, Christophe Lenglet, Guillermo Sapiro, and Rachid Deriche.
-    "Design of multishell sampling schemes with uniform coverage in diffusion MRI."
-    Magnetic Resonance in Medicine 69, no. 6 (2013): 1534-1540.
 """
 
 import numpy as np
