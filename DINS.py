@@ -2,14 +2,10 @@
 Author: Jonathan Gant
 Modification Dates: August 10th 2021 - Added documentation and split script into helper files which are imported for 
                                        better readability
-                    March 7th 2021
-General Description: This program creates a simulated diffusion weighted image with complex fiber geometry. To achieve this goal a GUI is created and takes input from the user to define ROIs and fibers. For each fiber direction vectors are calculated and the voxels contained by the fiber are also selected. The diffusion tensors for each voxel are then calculated and the diffusion weighted signal is then calculated and saved as a NIFTI image. The following algorithms are used in this program: 
-References:
-
-
-Global Variables: None
-List of variables: Refer to individual subroutine documentation.
-Common Blocks: None
+General Description: This program creates a simulated diffusion weighted image with complex fiber geometry. 
+To achieve this goal a GUI is created and takes input from the user to define ROIs and fibers.
+For each fiber direction vectors are calculated and the voxels contained by the fiber are also selected.
+The diffusion tensors for each voxel are then calculated and the diffusion weighted signal is then calculated and saved as a NIFTI image.
 
 List of subroutines (functions):
 DINS - class defining the parents class of the GUI.
